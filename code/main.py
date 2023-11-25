@@ -3,12 +3,16 @@ import digitalio
 import board
 import math
 import time
+from analogio import AnalogIn
 
 print("LumiDrive v10") 
 
 # Setting up the product's blue stat LED to blink
 led = digitalio.DigitalInOut(board.D13)
 led.direction = digitalio.Direction.OUTPUT
+
+# Set up the pin to read from the microphone
+microphone_in = AnalogIn(board.A4)
 
 # These two variables should be adjusted to reflect the number of LEDs you have
 # and how bright you want them.
@@ -44,6 +48,13 @@ def travel(color, wait):
         pixels[pos] = color 
         pixels.show() 
         time.sleep(wait)
+
+
+def convert_voltage_to_pixels(raw_voltage):
+    num_pixels_to_light = min(int((raw_voltage - 1.59) * 100), 59)
+    for pos in range(num_pixels_to_light):
+        pixels[pos] = RED 
+        pixels.show() 
 
 # This function takes a color and a dely and fills the entire strand with that color. 
 # The delay is given in the case you use multiple color fills in a row.  
@@ -278,8 +289,16 @@ def speak():
 
 	pixels.show()	
 
+
+def get_voltage(pin):
+	return (pin.value * 3.3) / 65536
+
+
+
+
 # ************************************************************************************
 
+'''
 
 color_fill(BLACK,.001) 
 #show_all_pieces()
@@ -287,7 +306,7 @@ color_fill(BLACK,.001)
 
 #stop_speaking()
 
-'''
+
 # What Adafruit CircuitPython 4.0.0-alpha looked like
 for i in range(5):
 	speak()
@@ -298,8 +317,8 @@ for i in range(5):
 	time.sleep(0.2)
 	stop_speaking()
 
-	time.sleep(0.5)
-'''
+	time.sleep(0.2)
+
 
 
 # What Adafruit CircuitPython 8.2.8 is capable of
@@ -314,5 +333,17 @@ for i in range(10):
 
 	time.sleep(0.1)
 
-	
+
+
 color_fill(BLACK,.001) 
+
+'''
+
+
+color_fill(BLACK,.001)
+time.sleep(1)
+while True:
+	color_fill(BLACK,.001)
+	convert_voltage_to_pixels(get_voltage(microphone_in))
+	
+	
