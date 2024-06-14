@@ -52,147 +52,146 @@ def stop_speaking():
 	color_fill(BLACK,.001) 
 
 
-	# Mouth
-	pixels[0] = BLACK
+	# Left Cheek
+	pixels[0] = WHITE
 	pixels[1] = BLACK
 	pixels[2] = BLACK
-	pixels[3] = BLACK
+	pixels[3] = WHITE
 
-	# Soul Patch
-	pixels[4] = BLACK
-	pixels[5] = BLACK
-	pixels[6] = BLACK
+	# Left Eye
+	pixels[4] = PURPLE
+	pixels[5] = PURPLE
+	pixels[6] = PURPLE
 
-	# Right Cheek
+	# Forehead & Left Eyebrow
 	pixels[7] = WHITE
 	pixels[8] = BLACK
 	pixels[9] = BLACK
-	pixels[10] = WHITE
-
-	# Right Eye
-	pixels[11] = PURPLE
-	pixels[12] = PURPLE
-	pixels[13] = PURPLE
-
-	# Right Eyebrow
-	pixels[14] = WHITE
-
-	# Large Brow
+	pixels[10] = BLACK
+	pixels[11] = BLACK
+	pixels[12] = BLACK
+	pixels[13] = WHITE
+	pixels[14] = BLACK
 	pixels[15] = BLACK
-	pixels[16] = BLACK
+	pixels[16] = WHITE
+
+	# Small Brow
 	pixels[17] = BLACK
 	pixels[18] = BLACK
 	pixels[19] = BLACK
 	pixels[20] = BLACK
 	pixels[21] = BLACK
 	pixels[22] = BLACK
-
-	# Small Brow
 	pixels[23] = BLACK
+
+	# Large Brow
 	pixels[24] = BLACK
 	pixels[25] = BLACK
 	pixels[26] = BLACK
 	pixels[27] = BLACK
 	pixels[28] = BLACK
 	pixels[29] = BLACK
-
-	# Forehead & Left Eyebrow
-	pixels[30] = WHITE
+	pixels[30] = BLACK
 	pixels[31] = BLACK
-	pixels[32] = BLACK
-	pixels[33] = BLACK
-	pixels[34] = BLACK
-	pixels[35] = BLACK
+
+	# Right Eyebrow
+	pixels[32] = WHITE
+	
+	# Right Eye
+	pixels[33] = PURPLE
+	pixels[34] = PURPLE
+	pixels[35] = PURPLE
+
+	# Right Cheek
 	pixels[36] = WHITE
 	pixels[37] = BLACK
 	pixels[38] = BLACK
 	pixels[39] = WHITE
-
-	# Left Eye
-	pixels[40] = PURPLE
-	pixels[41] = PURPLE
-	pixels[42] = PURPLE
-
-	# Left Cheek
-	pixels[43] = WHITE
+	
+	# Soul Patch
+	pixels[40] = BLACK
+	pixels[41] = BLACK
+	pixels[42] = BLACK
+	
+	# Mouth
+	pixels[43] = BLACK
 	pixels[44] = BLACK
 	pixels[45] = BLACK
-	pixels[46] = WHITE
-
-
+	pixels[46] = BLACK
+	
+	
 	pixels.show()
 
 
 def speak():
 	color_fill(BLACK,.001) 
 
+	# Left Cheek
+	pixels[0] = BLACK
+	pixels[1] = BLACK
+	pixels[2] = BLACK
+	pixels[3] = BLACK
 
-	# Mouth
-	pixels[0] = RED
-	pixels[1] = RED
-	pixels[2] = RED
-	pixels[3] = RED
+	# Left Eye
+	pixels[4] = BLACK
+	pixels[5] = BLACK
+	pixels[6] = BLACK
 
-	# Soul Patch
-	pixels[4] = RED
-	pixels[5] = RED
-	pixels[6] = RED
-
-	# Right Cheek
+	# Forehead & Left Eyebrow
 	pixels[7] = BLACK
 	pixels[8] = BLACK
 	pixels[9] = BLACK
 	pixels[10] = BLACK
-
-	# Right Eye
 	pixels[11] = BLACK
 	pixels[12] = BLACK
 	pixels[13] = BLACK
-
-	# Right Eyebrow
 	pixels[14] = BLACK
+	pixels[15] = BLACK
+	pixels[16] = BLACK
 
-	# Large Brow
-	pixels[15] = RED
-	pixels[16] = RED
+	# Small Brow
 	pixels[17] = RED
 	pixels[18] = RED
 	pixels[19] = RED
 	pixels[20] = RED
 	pixels[21] = RED
 	pixels[22] = RED
-
-	# Small Brow
 	pixels[23] = RED
+	
+	# Large Brow
 	pixels[24] = RED
 	pixels[25] = RED
 	pixels[26] = RED
 	pixels[27] = RED
 	pixels[28] = RED
 	pixels[29] = RED
+	pixels[30] = RED
+	pixels[31] = RED
 
-	# Forehead & Left Eyebrow
-	pixels[30] = BLACK
-	pixels[31] = BLACK
+	# Right Eyebrow
 	pixels[32] = BLACK
+
+	# Right Eye
 	pixels[33] = BLACK
 	pixels[34] = BLACK
 	pixels[35] = BLACK
+
+	# Right Cheek
 	pixels[36] = BLACK
 	pixels[37] = BLACK
 	pixels[38] = BLACK
 	pixels[39] = BLACK
+	
+	# Soul Patch
+	pixels[40] = RED
+	pixels[41] = RED
+	pixels[42] = RED
 
-	# Left Eye
-	pixels[40] = BLACK
-	pixels[41] = BLACK
-	pixels[42] = BLACK
-
-	# Left Cheek
-	pixels[43] = BLACK
-	pixels[44] = BLACK
-	pixels[45] = BLACK
-	pixels[46] = BLACK
+	# Mouth
+	pixels[43] = RED
+	pixels[44] = RED
+	pixels[45] = RED
+	pixels[46] = RED
 
 
 	pixels.show()
