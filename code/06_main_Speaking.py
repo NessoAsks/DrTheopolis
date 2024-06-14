@@ -202,7 +202,7 @@ def speak():
 while True:
 	if is_speaking():
 		speak()
-		time.sleep(.08)
+		time.sleep(.10)
 		stop_speaking()
 		time.sleep(.05)
 	else:
