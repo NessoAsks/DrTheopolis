@@ -204,71 +204,26 @@ time_between_brightness_change = 0.05
 
 while True:
 	if is_speaking():
-	
-		num_variations = random.randrange(1, 4)
-		
-		
-		# TODO: Add some randomness to the length of time for the speaking phase.
-	
-		pixels.brightness = 0.05
-		pixels.show()
 		speak()
 
-#		num_variations = 4
+		num_variations = random.randrange(1, 4)
+		length_of_brightness_change = random.randrange(1, 3) / 10
+		pixels.brightness = 0.1
 		while num_variations > 0:
-			time.sleep(3 * time_between_brightness_change)
-			pixels.brightness = 0.15
+			time.sleep(length_of_brightness_change)
+			pixels.brightness = pixels.brightness + 0.07 if num_variations % 2 == 0 else pixels.brightness - 0.07
 			pixels.show()
-			time.sleep(time_between_brightness_change)
-			pixels.brightness = 0.1
-			pixels.show()
-			
+
 			num_variations = num_variations - 1
 
-	
 
-		time.sleep(time_between_brightness_change)
-#		time.sleep(.10)
-
-		pixels.brightness = 0.05
+		pixels.brightness = 0.15
 		pixels.show()
 		stop_speaking()
-#		time.sleep(time_between_brightness_change)
-#		pixels.brightness = 0.15
-#		pixels.show()
-		time.sleep(time_between_brightness_change)
-		pixels.brightness = 0.1
-		pixels.show()
 
-#		time.sleep(.03)
-		time.sleep(time_between_brightness_change)
-
-
-#		speak()
-#		pixels.brightness = 0.2
-#		time.sleep(.02)
-#		pixels.brightness = 0.4
-#		time.sleep(.02)
-#		pixels.brightness = 0.2
-#		time.sleep(.02)
-#		pixels.brightness = 0.1
-
-
-#		time.sleep(.08)
-#		stop_speaking()
-
-#		speak()
-#		pixels.brightness = 0.2
-#		time.sleep(.02)
-#		pixels.brightness = 0.4
-#		time.sleep(.02)
-#		pixels.brightness = 0.2
-#		time.sleep(.02)
-#		pixels.brightness = 0.1
-
-#		time.sleep(.01)
-#		stop_speaking()
 	else:
+		pixels.brightness = 0.15
+		pixels.show()
 		stop_speaking()
 
 
